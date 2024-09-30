@@ -1,50 +1,22 @@
-# React + TypeScript + Vite
+# GDG OnCampus VIIT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GDG OnCampus VIIT** is a student-led community that is part of the Google Developer Groups (GDG) initiative, aimed at fostering learning, collaboration, and innovation among students interested in technology and development.
 
-Currently, two official plugins are available:
+## Mission
+Our mission is to empower students by providing them with opportunities to learn, grow, and connect with like-minded individuals. We focus on nurturing talent in various fields such as web development, mobile development, cloud computing, artificial intelligence, and more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Activities
+We organize a variety of events, including:
 
-## Expanding the ESLint configuration
+- **Workshops**: Hands-on sessions on trending technologies and tools.
+- **Tech Talks**: Guest lectures from industry experts and experienced developers.
+- **Hackathons**: Collaborative coding events that encourage creativity and problem-solving.
+- **Study Groups**: Peer learning sessions for collaborative study and project work.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Community
+Our community is open to all students, irrespective of their technical background. We believe in the power of collective learning and support, fostering an inclusive environment where everyone can contribute and thrive.
 
-- Configure the top-level `parserOptions` property like this:
+## Join Us
+Become a part of GDG OnCampus VIIT to enhance your skills, network with professionals, and take part in exciting tech events. Let’s innovate and grow together!
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+For more information, visit our [website](https://gdgviit.com) or follow us on [social media](#).
