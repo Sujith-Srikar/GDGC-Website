@@ -30,7 +30,8 @@ export default {
         },
       },
       fontFamily: {
-        google_sans_display: "Google Sans Display",
+        GSD_Bold: "GSD-Bold",
+        GSD_Regular: "GSD-Regular",
       },
     },
   },
