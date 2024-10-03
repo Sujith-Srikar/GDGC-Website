@@ -36,7 +36,6 @@ function Team() {
     {
       MemberName: "Varun Kumar",
       Role: "Technical Lead",
-      // Image: "https://avatars.githubusercontent.com/u/129203576?v=4",
       Image: VarunPic,
       GithubLink: "https://github.com/Padala-Varun",
       LinkedinLink: "https://www.linkedin.com/in/padala-venkata-sai-varun-kumar-37b844291/"
@@ -145,7 +144,7 @@ function Team() {
 
   return (
     <div className="m-auto pt-[72px] w-full h-full">
-      <div className="md:relative rounded-3xl w-full md:w-[80%] m-auto h-[calc(100vh-72px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
+      <div className="md:relative rounded-3xl w-full lg:w-[80%] m-auto h-[calc(100vh-72px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
         <div className="md:w-1/2">
           <p className="text-center md:text-start text-4xl md:text-5xl font-bold">MEET OUR TEAM:</p>
           {matches && <img className="absolute left-0 bottom-0 w-[70%]" src={MOTImage} alt="image" />}
