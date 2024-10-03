@@ -3,10 +3,12 @@ import MOTImage from "../assets/mot.png";
 import { useEffect, useState } from "react";
 import HimaPic from "../assets/hima.jpeg";
 import SujithPic from "../assets/sujith.jpg";
-import VarunPic from "../assets/varun.jpg";
+import VarunPic from "../assets/varun.jpeg";
 import GaneshPic from "../assets/ganesh.jpeg";
 import DurgeshPic from "../assets/durgesh.jpeg";
+import NikhilPic from "../assets/nikhil.jpeg";
 import SowmyaPic from "../assets/sowmya.jpg";
+import SidharthPic from "../assets/sidharth.jpeg";
 import RaghavendraPic from "../assets/raghavendra.jpeg";
 import AshrithPic from "../assets/ashrith.jpg";
 import TejeshPic from "../assets/tejesh.jpg";
@@ -57,7 +59,7 @@ function Team() {
     {
       MemberName: "Guru Nikhil",
       Role: "Web Developer Lead",
-      Image: "https://assets2.ignimgs.com/2016/08/29/mr-robotjpg-42cabf.jpg?width=300&auto=webp",
+      Image: NikhilPic,
       GithubLink: "https://github.com/MGuruNikhil",
       LinkedinLink: "https://www.linkedin.com/in/gurunikhilm/"
     },
@@ -76,11 +78,11 @@ function Team() {
       LinkedinLink: ""
     },
     {
-      MemberName: "Sidhartha",
+      MemberName: "Sidharth",
       Role: "Android Lead",
-      Image: "",
-      GithubLink: "",
-      LinkedinLink: ""
+      Image: SidharthPic,
+      GithubLink: "https://github.com/elitedeveloper05",
+      LinkedinLink: "https://www.linkedin.com/in/elitedeveloper05"
     },
     {
       MemberName: "Raghavendra",
