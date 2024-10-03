@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Navbar } from "./components/index.ts"
-import {Home, Team, Event} from "./pages/index.ts"
+import { Navbar } from "./components/index.ts";
+import { FeedbackForm } from "./components/suggestions.tsx";
+import { Home, Team, Event } from "./pages/index.ts";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
@@ -10,7 +11,7 @@ import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
-  useEffect(()=> {
+  useEffect(() => {
     const lenis = new Lenis();
 
     lenis.on("scroll", (e) => {
@@ -23,7 +24,7 @@ function App() {
     }
 
     requestAnimationFrame(raf);
-  })
+  });
 
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
           <Route path="/event" element={<Event />} />
         </Routes>
       </AnimatePresence>
+      <FeedbackForm />
     </>
   );
 }
