@@ -10,4 +10,4 @@ function Team() {
   );
 }
 
-export default Transition(Team);
+export default Team;

@@ -3,11 +3,11 @@ import Transition from "../components/Transition";
 function Home() {
   return (
     <>
-      <div className="container font-google_sans_display">
+      <div className="container font-GSD_Bold">
         <h1>Home</h1>
       </div>
     </>
   );
 }
 
-export default Transition(Home);
+export default Home;
