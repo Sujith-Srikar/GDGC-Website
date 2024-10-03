@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
