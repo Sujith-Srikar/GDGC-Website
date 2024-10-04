@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import footer_logo from "../../public/images/footer_gdg_logo.svg";
 function Footer() {
   return (
     <>
@@ -73,7 +73,7 @@ function Footer() {
             </p>
             <div className="flex items-center">
               <img
-                src="../../public/images/footer_gdg_logo.svg"
+                src={footer_logo}
                 alt="Google Developer Groups Logo"
                 className="h-10 w-auto mr-2"
               />
