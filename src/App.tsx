@@ -1,22 +1,16 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Navbar } from "./components/index.ts";
-import { FeedbackForm } from "./components/suggestions.tsx";
+import { Navbar, Footer } from "./components/index.ts";
 import { Home, Team, Event } from "./pages/index.ts";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
 
-import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
   useEffect(() => {
     const lenis = new Lenis();
-
-    lenis.on("scroll", (e) => {
-      console.log(e);
-    });
 
     function raf(time: number) {
       lenis.raf(time);
@@ -37,6 +31,12 @@ function App() {
         </Routes>
       </AnimatePresence>
       <FeedbackForm />
+      <Routes location={location} key={location.pathname}>
+        <Route index element={<Home />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="/footer" element={<Footer />} />
+      </Routes>
     </>
   );
 }

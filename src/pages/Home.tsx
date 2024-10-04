@@ -1,5 +1,3 @@
-import Transition from "../components/Transition";
-
 function Home() {
   return (
     <>
