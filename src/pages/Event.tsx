@@ -1,5 +1,3 @@
-import Transition from "../components/Transition";
-
 function Event() {
   return (
     <>
@@ -10,4 +8,4 @@ function Event() {
   );
 }
 
-export default Transition(Event);
+export default Event;
