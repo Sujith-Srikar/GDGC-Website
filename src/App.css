@@ -80,3 +80,27 @@ a {
 .transition-out .block {
   transform-origin: bottom;
 }
+
+.team-member .info > div:first-child {
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member .info > div:last-child {
+  transition: transform 0.3s ease-in-out 0.1s;
+}
+
+.team-member .image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover .info > div:first-child {
+  transform: translateX(3px);
+}
+
+.team-member:hover .info > div:last-child {
+  transform: translateX(3px);
+}
+
+.team-member:hover .image {
+  transform: translateX(3px);
+}
