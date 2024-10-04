@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Transition(Home);
