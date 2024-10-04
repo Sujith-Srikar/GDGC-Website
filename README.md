@@ -20,6 +20,3 @@ Our community is open to all students, irrespective of their technical backgroun
 Become a part of GDG OnCampus VIIT to enhance your skills, network with professionals, and take part in exciting tech events. Let’s innovate and grow together!
 
 For more information, visit our [website](https://gdgviit.com) or follow us on [social media](#).
-
-
-Hello Sample
