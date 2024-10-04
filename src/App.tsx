@@ -1,11 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Navbar, Footer } from "./components/index.ts";
+import { FeedbackForm } from "./components/suggestions.tsx";
 import { Home, Team, Event } from "./pages/index.ts";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
 
 import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
