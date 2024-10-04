@@ -5,7 +5,7 @@ import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
 
-import { AnimatePresence } from "framer-motion";
+
 import { useEffect } from "react";
 
 function App() {
