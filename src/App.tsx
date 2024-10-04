@@ -11,24 +11,14 @@ import { useEffect } from "react";
 function App() {
   const location = useLocation();
   useEffect(()=> {
-    if (location.pathname !== "/team") {
-      const lenis = new Lenis();
+    const lenis = new Lenis();
 
-      lenis.on("scroll", (e) => {
-        console.log(e);
-      });
-
-      function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
+    function raf(time: number) {
+      lenis.raf(time);
       requestAnimationFrame(raf);
-
-      return () => {
-        lenis.destroy();
-      };
     }
+
+    requestAnimationFrame(raf);
   })
 
   return (
