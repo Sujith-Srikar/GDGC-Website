@@ -30,6 +30,7 @@ function App() {
         <Route path="/event" element={<Event />} />
         <Route path="/footer" element={<Footer />} />
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -1,8 +1,10 @@
+import { Hero } from "../components/index";
+
 function Home() {
   return (
     <>
-      <div className="container font-GSD_Bold">
-        <h1>Home</h1>
+      <div className="container w-full min-h-screen">
+        <Hero />
       </div>
     </>
   );
