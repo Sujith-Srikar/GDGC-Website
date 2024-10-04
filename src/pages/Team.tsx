@@ -1,19 +1,21 @@
 import { TeamMember, Transition } from "../components/index.ts"; 
 import MOTImage from "../assets/mot.png";
 import { useEffect, useState } from "react";
-import HimaPic from "../assets/hima.jpeg";
+import HimaPic from "../assets/hima.jpg";
 import SujithPic from "../assets/sujith.jpg";
 import VarunPic from "../assets/varun.jpeg";
 import GaneshPic from "../assets/ganesh.jpeg";
 import DurgeshPic from "../assets/durgesh.jpeg";
 import NikhilPic from "../assets/nikhil.jpeg";
 import SowmyaPic from "../assets/sowmya.jpg";
+import KoushikPic from "../assets/koushik.jpeg";
 import SidharthPic from "../assets/sidharth.jpeg";
 import RaghavendraPic from "../assets/raghavendra.jpeg";
 import AshrithPic from "../assets/ashrith.jpg";
 import TejeshPic from "../assets/tejesh.jpg";
 import ShirinPic from "../assets/shirin.jpeg";
 import GiriPic from "../assets/giri.jpeg";
+import VarshithaPic from "../assets/varshitha.jpg";
 import VivekPic from "../assets/vivek.jpg";
 import ThanushaPic from "../assets/thanusha.jpeg";
 
@@ -73,9 +75,9 @@ function Team() {
     {
       MemberName: "Koushik",
       Role: "AI/ML Lead",
-      Image: "",
+      Image: KoushikPic,
       GithubLink: "https://github.com/kskkoushik",
-      LinkedinLink: ""
+      LinkedinLink: "https://www.linkedin.com/in/kskkoushik135/"
     },
     {
       MemberName: "Sidharth",
@@ -120,6 +122,13 @@ function Team() {
       LinkedinLink: "https://www.linkedin.com/in/giri-krishna-365ab9271"
     },
     {
+      MemberName: "Varshitha",
+      Role: "Event Management Lead",
+      Image: VarshithaPic,
+      GithubLink: "https://github.com/varshithalalam",
+      LinkedinLink: "https://www.linkedin.com/in/varshitha-lalam-784533270"
+    },
+    {
       MemberName: "Vivek Vardhan",
       Role: "Content Writing Lead",
       Image: VivekPic,
@@ -146,7 +155,7 @@ function Team() {
 
   return (
     <div className="m-auto pt-[72px] w-full h-full">
-      <div className="md:relative rounded-3xl w-full lg:w-[80%] m-auto h-[calc(100vh-72px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
+      <div className="md:relative rounded-3xl w-full m-auto h-[calc(100vh-72px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
         <div className="md:w-1/2">
           <p className="text-center md:text-start text-4xl md:text-5xl font-bold">MEET OUR TEAM:</p>
           {matches && <img className="absolute left-0 bottom-0 w-[70%]" src={MOTImage} alt="image" />}
