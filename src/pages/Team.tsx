@@ -1,4 +1,4 @@
-import { TeamMember, Transition } from "../components/index.ts"; 
+import { TeamMember } from "../components/index.ts"; 
 import MOTImage from "../assets/mot.png";
 import { useEffect, useState } from "react";
 import HimaPic from "../assets/hima.jpg";
@@ -69,8 +69,8 @@ function Team() {
       MemberName: "Sowmya",
       Role: "Web Developer Lead",
       Image: SowmyaPic,
-      GithubLink: "https://www.linkedin.com/in/sowmya-musti-531715257/",
-      LinkedinLink: "https://github.com/m-sowmya7"
+      GithubLink: "https://github.com/m-sowmya7",
+      LinkedinLink: "https://www.linkedin.com/in/sowmya-musti-531715257/"
     },
     {
       MemberName: "Koushik",
@@ -168,4 +168,4 @@ function Team() {
   );
 }
 
-export default Transition(Team);
+export default Team;
