@@ -5,20 +5,30 @@ import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
 
-import { AnimatePresence } from "framer-motion";
+
 import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
   useEffect(()=> {
-    const lenis = new Lenis();
+    if (location.pathname !== "/team") {
+      const lenis = new Lenis();
 
-    function raf(time: number) {
-      lenis.raf(time);
+      lenis.on("scroll", (e) => {
+        console.log(e);
+      });
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
       requestAnimationFrame(raf);
-    }
 
-    requestAnimationFrame(raf);
+      return () => {
+        lenis.destroy();
+      };
+    }
   })
 
   return (
