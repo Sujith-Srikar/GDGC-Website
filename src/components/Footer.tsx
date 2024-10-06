@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import footer_logo from "../../public/images/footer_gdg_logo.svg";
+import footer_ill from "../../public/images/Footer_Illustration.png";
+
 function Footer() {
   return (
     <>
@@ -9,7 +11,7 @@ function Footer() {
           {/* Image Section */}
           <div className="flex justify-center md:relative md:right-[15%] items-center h-auto w-full sm:w-[70vw] md:w-[40vw]">
             <img
-              src="../../images/Footer_Illustration.png"
+              src={footer_ill}
               alt="Footer Illustration"
               className="h-full w-full object-contain"
             />
