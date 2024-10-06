@@ -1,16 +1,16 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Navbar, Footer } from "./components/index.ts"
-import {Home, Team, Event} from "./pages/index.ts"
+import { Navbar, Footer } from "./components/index.ts";
+import { Home, Team, Event } from "./pages/index.ts";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
 
-
 import { useEffect } from "react";
+import { Articles } from "./components/Articles.tsx";
 
 function App() {
   const location = useLocation();
-  useEffect(()=> {
+  useEffect(() => {
     if (location.pathname !== "/team") {
       const lenis = new Lenis();
 
@@ -29,7 +29,7 @@ function App() {
         lenis.destroy();
       };
     }
-  })
+  });
 
   return (
     <>
@@ -40,6 +40,7 @@ function App() {
         <Route path="/event" element={<Event />} />
         <Route path="/footer" element={<Footer />} />
       </Routes>
+      <Articles />
     </>
   );
 }
