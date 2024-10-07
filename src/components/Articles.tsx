@@ -52,7 +52,7 @@ const articles = [
   },
 ];
 
-export const Articles = () => {
+const Articles = () => {
   return (
     <Container
       id="articles"
@@ -148,3 +148,5 @@ export const Articles = () => {
     </Container>
   );
 };
+
+export default Articles;
