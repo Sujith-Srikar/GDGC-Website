@@ -15,7 +15,7 @@ interface CardProps {
   title: string;
   content: string;
 }
-const Carousel = () => {
+const Event = () => {
   return (
     <div>
       <NewEvents />
@@ -24,7 +24,6 @@ const Carousel = () => {
 
   );
 };
-
 
 const NewEvents = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -36,17 +35,20 @@ const NewEvents = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh]">
-      <h2 className="text-4xl font-semibold pl-12 pt-20 font-google_sans_display text-grey-700">Upcoming Events: </h2>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-24"> 
-        <motion.div style={{ x }} className="flex gap-20">
-          {cards.map((card, index) => {
-            return <Card key={index} card={card} index={index} />;
-          })}
+      <h2 className="text-4xl font-semibold pl-12 pt-16 pb-2 font-google_sans_display text-grey-700">
+        Upcoming Events:
+      </h2>
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-48">
+        <motion.div style={{ x }} className="flex gap-10 md:gap-20">
+          {cards.map((card, index) => (
+            <Card key={index} card={card} index={index} />
+          ))}
         </motion.div>
       </div>
     </section>
   );
 };
+
 const PrevEvents = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -57,19 +59,21 @@ const PrevEvents = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh]">
-      <h2 className="text-4xl font-semibold pl-12 pb-4 font-google_sans_display text-grey-700">Past Events:</h2>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-28"> 
-        <motion.div style={{ x }} className="flex gap-20">
-          {pastCards.map((card, index) => {
-            return <Card key={index} card={card} index={index} />;
-          })}
+      <h2 className="text-4xl font-semibold pl-12 pt-0 pb-4 font-google_sans_display text-grey-700">
+        Past Events:
+      </h2>
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-48">
+        <motion.div style={{ x }} className="flex gap-10 md:gap-20">
+          {pastCards.map((card, index) => (
+            <Card key={index} card={card} index={index} />
+          ))}
         </motion.div>
       </div>
     </section>
   );
 };
 
-const colors = ["bg-blue-500", "bg-green-500", "bg-red-500", "bg-yellow-500"];
+const colors = ["bg-blue-300", "bg-green-300", "bg-red-300", "bg-yellow-300"];
 
 const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -113,8 +117,7 @@ const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => 
         transformStyle: "preserve-3d",
         transform,
       } as any}
-      className="w-[500px] h-[400px] top-5 bg-white border-2 border-black rounded-[20px] hover:shadow-2xl"
-    >
+      className="w-[370px] h-[450px] sm:w-[500px] sm:h-[400px] top-3 bg-white border-2 border-black rounded-[20px] hover:shadow-2xl">
       <div
         style={{
           transform: "translateY(50px)",
@@ -169,4 +172,4 @@ export const pastCards: CardProps[] = [
   { title: "Past Event 5", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 5"},
 ];
 
-export default Carousel;
+export default Event;

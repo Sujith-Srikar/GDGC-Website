@@ -3,7 +3,7 @@ import Transition from "./Transition"
 import Footer from "./Footer"
 import TeamMember from "./TeamMember"
 import Hero from "./Hero"
-import Carousel from "./Events"
+import Event from "./Events"
 import Articles from "./Articles"
 
-export {Navbar, Transition, TeamMember, Footer, Hero, Carousel, Articles}
+export {Navbar, Transition, TeamMember, Footer, Hero, Event, Articles}
