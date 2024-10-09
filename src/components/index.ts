@@ -5,6 +5,5 @@ import TeamMember from "./TeamMember"
 import Hero from "./Hero"
 import Carousel from "./Events"
 import Articles from "./Articles"
-import MeetOurTeam from "./MeetOurTeam"
 
-export {Navbar, Transition, MeetOurTeam, TeamMember, Footer, Hero, Carousel, Articles}
+export {Navbar, Transition, TeamMember, Footer, Hero, Carousel, Articles}
