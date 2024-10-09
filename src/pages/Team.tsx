@@ -198,12 +198,12 @@ const Team = () => {
   
 
   return (
-    <div ref={outerRef} className="outer font-GSD_Regular md:relative rounded-3xl w-full m-auto h-[calc(100vh-72px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
+    <div ref={outerRef} className="font-GSD_Regular md:relative rounded-3xl w-full m-auto h-[calc(100vh-72px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
       <div className="md:w-1/2">
         <p className="text-center md:text-start text-4xl md:text-5xl font-bold">MEET OUR TEAM:</p>
         {matches && <img className="absolute left-0 bottom-0 w-[70%]" src={MOTImage} alt="image" />}
       </div>
-      <div ref={innerRef} className="inner z-10 w-full md:w-1/2 flex flex-col gap-2 md:overflow-y-scroll p-2">
+      <div ref={innerRef} className="z-10 w-full md:w-1/2 flex flex-col gap-2 md:overflow-y-scroll p-2">
         {Members.map((member, index) => <TeamMember key={index} {...member} />)}
       </div>
     </div>
