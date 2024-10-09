@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import footer_logo from "../../public/images/footer_gdg_logo.svg";
-import footer_ill from "../../public/images/Footer_Illustration.png";
+import footer_logo from "/images/footer_gdg_logo.svg";
+import footer_ill from "/images/Footer_Illustration.png";
+import React from "react";
 
 function Footer() {
   return (
     <>
-      <footer className="relative min-h-screen w-full bg-white bg-dot-black/[0.2] ">
+      <footer className="relative min-h-screen w-full bg-white bg-dot-black/[0.2]">
         {/* Main Content Wrapper */}
         <div className="flex flex-col md:relative items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8 md:h-[85vh] px-[5vw]">
           {/* Image Section */}
@@ -26,41 +27,97 @@ function Footer() {
               <li>
                 <Link
                   to="https://github.com"
-                  className="text-red-500 text-xl md:text-2xl hover:underline"
+                  className="linkWrap style-4"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={
+                    {
+                      "--line": "#ea4335",
+                      "--color": "#ea4335",
+                    } as React.CSSProperties // cast to CSSProperties
+                  }
                 >
-                  GITHUB
+                  <span className="text-red-500">GITHUB</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline
+                      points="0.5 19.5 3 19.5 12.5 10 3 0.5"
+                      fill="none"
+                      stroke="#ea4335"
+                      strokeWidth="1"
+                    />
+                  </svg>
                 </Link>
               </li>
               <li>
                 <Link
                   to="https://x.com"
-                  className="text-blue-500 text-xl md:text-2xl hover:underline"
+                  className="linkWrap style-4"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={
+                    {
+                      "--line": "#4285f4",
+                      "--color": "#4285f4",
+                    } as React.CSSProperties
+                  }
                 >
-                  X
+                  <span className="text-blue-500">X</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline
+                      points="0.5 19.5 3 19.5 12.5 10 3 0.5"
+                      fill="none"
+                      stroke="#4285f4"
+                      strokeWidth="1"
+                    />
+                  </svg>
                 </Link>
               </li>
               <li>
                 <Link
                   to="https://linkedin.com"
-                  className="text-green-600 text-xl md:text-2xl hover:underline"
+                  className="linkWrap style-4"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={
+                    {
+                      "--line": "#34a853",
+                      "--color": "#34a853",
+                    } as React.CSSProperties
+                  }
                 >
-                  LINKEDIN
+                  <span className="text-green-500">LINKEDIN</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline
+                      points="0.5 19.5 3 19.5 12.5 10 3 0.5"
+                      fill="none"
+                      stroke="#34a853"
+                      strokeWidth="1"
+                    />
+                  </svg>
                 </Link>
               </li>
               <li>
                 <Link
                   to="https://instagram.com"
-                  className="text-yellow-500 text-xl md:text-2xl hover:underline"
+                  className="linkWrap style-4"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={
+                    {
+                      "--line": "#fbbc04",
+                      "--color": "#fbbc04",
+                    } as React.CSSProperties
+                  }
                 >
-                  INSTAGRAM
+                  <span className="text-yellow-500">INSTAGRAM</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline
+                      points="0.5 19.5 3 19.5 12.5 10 3 0.5"
+                      fill="none"
+                      stroke="#fbbc04"
+                      strokeWidth="1"
+                    />
+                  </svg>
                 </Link>
               </li>
             </ul>
@@ -68,7 +125,7 @@ function Footer() {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-black w-full bg-white pt-4 px-[5vw] mt-8 md:mt-12">
+        <div className="border-t border-black w-full bg-white py-4 px-[5vw] mt-8 md:mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-700 text-sm md:text-base">
               2024 ©GDGC VIIT

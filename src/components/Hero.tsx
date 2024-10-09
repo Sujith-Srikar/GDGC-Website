@@ -78,7 +78,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="absolute w-full min-h-screen font-GSD_Regular flex items-center justify-center flex-col">
+    <div className="relative w-full min-h-screen font-GSD_Regular flex items-center justify-center flex-col">
       {/* Adjust Image Section to Maintain Balance */}
       <img
         src={p1}
