@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Logo from "../../public/images/Header_Logo.png"
+import Logo from "/images/Header_Logo.svg"
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-100 p-4 flex justify-between items-center relative w-full shadow-md px-[5vw]">
+    <nav className="relative bg-white p-4 flex justify-between items-center w-full shadow-md px-[5vw]">
       {/* Logo Section */}
       <div className="flex items-center">
         <button onClick={() => navigate("/")}>
