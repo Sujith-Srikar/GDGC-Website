@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Navbar, Footer } from "./components/index.ts"
+import { Navbar, Footer, Articles } from "./components/index.ts";
 import {Home, Team, Event} from "./pages/index.ts"
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
@@ -12,10 +12,6 @@ function App() {
   const location = useLocation();
   useEffect(()=> {
     const lenis = new Lenis();
-
-    lenis.on("scroll", (e) => {
-      console.log(e);
-    });
 
     function raf(time: number) {
       lenis.raf(time);
@@ -37,7 +33,9 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/event" element={<Event />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/articles" element={<Articles />} />
       </Routes>
+      <Footer />
     </>
   );
 }
