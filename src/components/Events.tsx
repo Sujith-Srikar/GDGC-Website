@@ -15,7 +15,7 @@ interface CardProps {
   title: string;
   content: string;
 }
-const Carousel = () => {
+const Event = () => {
   return (
     <div>
       <NewEvents />
@@ -24,7 +24,6 @@ const Carousel = () => {
 
   );
 };
-
 
 const NewEvents = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -36,17 +35,20 @@ const NewEvents = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh]">
-      <h2 className="text-4xl font-semibold pl-12 pt-20 font-google_sans_display text-grey-700">Upcoming Events: </h2>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-24"> 
-        <motion.div style={{ x }} className="flex gap-20">
-          {cards.map((card, index) => {
-            return <Card key={index} card={card} index={index} />;
-          })}
+      <h2 className="text-4xl font-semibold pl-12 pt-16 pb-2 font-google_sans_display text-grey-700">
+        Upcoming Events:
+      </h2>
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-48">
+        <motion.div style={{ x }} className="flex gap-10 md:gap-20">
+          {cards.map((card, index) => (
+            <Card key={index} card={card} index={index} />
+          ))}
         </motion.div>
       </div>
     </section>
   );
 };
+
 const PrevEvents = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -57,19 +59,21 @@ const PrevEvents = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh]">
-      <h2 className="text-4xl font-semibold pl-12 pb-4 font-google_sans_display text-grey-700">Past Events:</h2>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-28"> 
-        <motion.div style={{ x }} className="flex gap-20">
-          {pastCards.map((card, index) => {
-            return <Card key={index} card={card} index={index} />;
-          })}
+      <h2 className="text-4xl font-semibold pl-12 pt-0 pb-4 font-google_sans_display text-grey-700">
+        Past Events:
+      </h2>
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden -mt-48">
+        <motion.div style={{ x }} className="flex gap-10 md:gap-20">
+          {pastCards.map((card, index) => (
+            <Card key={index} card={card} index={index} />
+          ))}
         </motion.div>
       </div>
     </section>
   );
 };
 
-const colors = ["bg-blue-500", "bg-green-500", "bg-red-500", "bg-yellow-500"];
+const colors = ["bg-blue-300", "bg-green-300", "bg-red-300", "bg-yellow-300"];
 
 const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -113,7 +117,7 @@ const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => 
         transformStyle: "preserve-3d",
         transform,
       } as any}
-      className="w-[500px] h-[400px] top-5 bg-white border-2 border-black rounded-[20px] hover:shadow-2xl"
+      className="w-[350px] h-[450px] sm:w-[500px] top-3 sm:h-[400px] bg-white border-2 border-black rounded-[20px] hover:shadow-2xl flex-shrink-0"
     >
       <div
         style={{
@@ -124,7 +128,11 @@ const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => 
         className="absolute inset-4 grid place-content-center rounded-xl shadow-lg"
       ></div>
 
-      <div className={`relative w-full h-[200px] overflow-hidden p-4 ${colors[index % colors.length]} rounded-t-[20px]`}>
+      <div
+        className={`relative w-full h-[200px] overflow-hidden p-4 ${
+          colors[index % colors.length]
+        } rounded-t-[20px]`}
+      >
         <img
           className="object-cover w-full h-full overflow-hidden rounded-[20px] border-black border-2"
           src={card.image}
@@ -134,25 +142,34 @@ const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => 
 
       <hr className="border-t-2 border-black w-full" />
 
-      <div className="pl-4 pr-4 pt-3 pb-6">
-        <h2 className="text-lg font-bold mb-2 font-google_sans_display text-left">{card.title}</h2>
-        <p className="text-gray-700 text-left break-words truncate font-google_sans_display py-1">{card.content}</p>
+      {/* Content Area */}
+      <div className="pl-4 pr-4 pt-3 pb-6 flex-grow">
+        <h2 className="text-lg font-bold mb-2 font-google_sans_display text-left">
+          {card.title}
+        </h2>
+        <p className="text-gray-700 text-left break-words truncate font-google_sans_display py-1">
+          {card.content}
+        </p>
         <p className="text-gray-700 text-left font-semibold">{card.date}</p>
       </div>
 
-      <div className="flex justify-between items-center p-4">
+      {/* Footer with Tags and RSVP */}
+      <div className="flex justify-between items-center p-4 mt-auto">
         <div className="flex space-x-3 py-1">
-          <span className="inline-block bg-grey-100 rounded-full px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#code</span>
-          <span className="inline-block bg-grey-100 rounded-full px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#dev</span>
+          <span className="inline-block bg-grey-100 rounded-full px-2 py-1 text-sm font-semibold text-gray-700">
+            #code
+          </span>
+          <span className="inline-block bg-grey-100 rounded-full px-2 py-1 text-sm font-semibold text-gray-700">
+            #dev
+          </span>
         </div>
-        <button className="bg-blue-500 text-white text-center px-6 py-1 rounded backdrop-blur transition-colors hover:bg-white/30 hover:text-black mb-2">
+        <button className="bg-blue-500 text-white text-center px-6 py-1 rounded backdrop-blur transition-colors hover:bg-white/30 hover:text-black">
           RSVP
         </button>
       </div>
     </motion.div>
   );
 };
-
 
 export const cards: CardProps[] = [
   { title: "Web Development", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Learn about the latest trends in web development"},
@@ -169,4 +186,4 @@ export const pastCards: CardProps[] = [
   { title: "Past Event 5", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 5"},
 ];
 
-export default Carousel;
+export default Event;

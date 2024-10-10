@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Navbar, Footer, Articles } from "./components/index.ts";
-import {Home, Team, Event} from "./pages/index.ts"
+import { Navbar, Footer, Articles, Event } from "./components/index.ts";
+import {Home, Team} from "./pages/index.ts"
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
@@ -31,7 +31,7 @@ function App() {
       <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/event" element={<Event />} />
+        <Route path="/events" element={<Event />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/articles" element={<Articles />} />
       </Routes>
