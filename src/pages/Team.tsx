@@ -1,7 +1,5 @@
 import { TeamMember } from "../components/index";
-import MOTImage from "../assets/mot.png";
-import { useEffect, useRef, useState } from "react";
-import Lenis from "lenis";
+import MOTImage from "../assets/mot.svg";
 import HimaPic from "../assets/hima.jpg";
 import SujithPic from "../assets/sujith.jpg";
 import VarunPic from "../assets/varun.jpeg";
@@ -19,6 +17,9 @@ import GiriPic from "../assets/giri.jpeg";
 import VarshithaPic from "../assets/varshitha.jpg";
 import VivekPic from "../assets/vivek.jpg";
 import ThanushaPic from "../assets/thanusha.jpeg";
+
+import { useEffect, useRef, useState } from "react";
+import Lenis from "lenis";
 
 const Team = () => {
 
@@ -198,12 +199,12 @@ const Team = () => {
   
 
   return (
-    <div ref={outerRef} className="font-GSD_Regular relative rounded-3xl w-full m-auto h-[calc(100vh-72px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
+    <div ref={outerRef} className="font-GSD_Regular relative rounded-3xl w-full m-auto h-[calc(100vh-65px)] bg-[#D8E2F9] px-6 py-12 flex flex-col gap-4 md:gap-0 md:flex-row overflow-auto md:overflow-hidden">
       <div className="md:w-1/2">
         <p className="text-center md:text-start text-4xl md:text-5xl font-bold">MEET OUR TEAM:</p>
         {matches && <img className="absolute left-0 bottom-0 w-[70%]" src={MOTImage} alt="image" />}
       </div>
-      <div ref={innerRef} className="z-10 w-full md:w-1/2 flex flex-col gap-2 md:overflow-y-scroll p-2">
+      <div ref={innerRef} className="z-10 w-full md:w-1/2 flex flex-col gap-2 md:overflow-y-scroll p-2 no-scrollbar">
         {Members.map((member, index) => <TeamMember key={index} {...member} />)}
       </div>
     </div>

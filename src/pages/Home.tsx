@@ -4,7 +4,7 @@ import Team from "../pages/Team"
 function Home() {
   return (
     <>
-      <div className="container w-full min-h-screen overflow-hidden">
+      <div className="w-full min-h-screen overflow-hidden">
         <Hero />
         <Team />
       </div>

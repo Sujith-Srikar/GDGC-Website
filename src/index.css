@@ -64,3 +64,13 @@
     --stroke-delay: .195s;
   }
 }
+
+/* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}

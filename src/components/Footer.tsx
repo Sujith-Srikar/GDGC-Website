@@ -6,7 +6,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer className="relative min-h-screen w-full bg-white bg-dot-black/[0.2]">
+      <footer className="relative min-h-screen w-full bg-white bg-dot-black/[0.2] font-GSD_Regular">
         {/* Main Content Wrapper */}
         <div className="flex flex-col md:relative items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8 md:h-[85vh] px-[5vw]">
           {/* Image Section */}
