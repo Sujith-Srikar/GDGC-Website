@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { FaRegSquare } from "react-icons/fa6";
-import p1 from "../../public/images/Group 73.png";
-import p2 from "../../public/images/Group 73 (1).png";
-import p3 from "../../public/images/Group 76.png";
-import p4 from "../../public/images/Group 91.png";
-import p5 from "../../public/images/Vector (1).png";
-import p6 from "../../public/images/Vector (2).png";
-import p7 from "../../public/images/Vector.png";
-import p8 from "../../public/images/react like icon.png";
-import p9 from "../../public/images/undraw_programming_re_kg9v 1.png";
+import p1 from "/images/left_kite.svg";
+import p2 from "/images/right_kite.svg";
+import p3 from "/images/planets.svg";
+import p4 from "/images/boysitting.svg";
+import p5 from "/images/cloud_1.svg";
+import p6 from "/images/cloud_2.svg";
+import p7 from "/images/cloud_3.svg";
+import p8 from "/images/react_icon.svg";
+import p9 from "/images/programming.svg";
 
 const Hero = () => {
   // Initialize with the correct length to include quotes
@@ -61,83 +61,83 @@ const Hero = () => {
 
   const titleLetters = [
     { letter: "“", color: "text-red-500" },
-    { letter: "G", color: "text-green-500" },
-    { letter: "D", color: "text-green-500" },
-    { letter: "G", color: "text-green-500" },
-    { letter: " ", color: "text-black" },
+    { letter: "G", color: "text-green-600" },
+    { letter: "D", color: "text-green-600" },
+    { letter: "G", color: "text-green-600" },
+    { letter: "\u00A0", color: "text-black" },
     { letter: "O", color: "text-yellow-500" },
     { letter: "N", color: "text-yellow-500" },
-    { letter: " ", color: "text-black" },
+    { letter: "\u00A0", color: "text-black" },
     { letter: "C", color: "text-blue-500" },
     { letter: "A", color: "text-blue-500" },
     { letter: "M", color: "text-blue-500" },
     { letter: "P", color: "text-blue-500" },
     { letter: "U", color: "text-blue-500" },
     { letter: "S", color: "text-blue-500" },
-    { letter: "”", color: "text-red-500" },
+    { letter: "”", color: "text-red-600" },
   ];
 
   return (
-    <div className="w-full min-h-screen max-w-[1440px] font-GSD_Regular relative flex items-center justify-center flex-col border border-red-900">
+    <div className="relative w-full min-h-screen font-GSD_Regular flex items-center justify-center flex-col">
       {/* Adjust Image Section to Maintain Balance */}
       <img
         src={p1}
-        alt="Group 73"
-        className="absolute top-[33%] left-[0%] w-[15vw]"
+        alt="left_kite"
+        className="absolute top-[33%] left-[0%] w-[10vw]"
       />
       <img
         src={p2}
-        alt="Group 73"
-        className="absolute top-[44%] right-[0%] w-[15vw]"
+        alt="right_kite"
+        className="absolute top-[44%] right-[0%] w-[10vw]"
       />
       <img
         src={p3}
-        alt="Group 76"
-        className="absolute top-[12%] right-[10%] w-[10vw]"
+        alt="planets"
+        className="absolute top-[12%] right-[10%] w-[8vw]"
       />
       <img
         src={p4}
-        alt="Group 91"
-        className="absolute bottom-[0%] left-[0%] w-[21vw] "
+        alt="boy_sitting"
+        className="absolute bottom-[0%] left-[0%] w-[18vw] "
       />
       <img
         src={p5}
-        alt="Vector (1)"
-        className="absolute top-[10%] left-[40%] w-[27vw]"
+        alt="Cloud_1"
+        className="absolute top-[8%] left-[40%] w-[22vw]"
       />
       <img
         src={p6}
-        alt="Vector (2)"
+        alt="Cloud_2"
         className="absolute top-[3%] right-[25%] w-[3vw]"
       />
       <img
         src={p7}
-        alt="Vector"
-        className="absolute top-[9%] left-[10%] w-[9vw]"
+        alt="Cloud_3"
+        className="absolute top-[6%] left-[10%] w-[9vw]"
       />
       <img
         src={p8}
-        alt="react like icon"
-        className="absolute top-[20%] right-[5%] w-[3vw]"
+        alt="react_icon"
+        className="absolute top-[20%] right-[3%] w-[2vw]"
       />
       <img
         src={p8}
-        alt="react like icon"
-        className="absolute top-[12%] left-[3%] w-[3vw]"
+        alt="react_icon"
+        className="absolute top-[12%] left-[3%] w-[2vw]"
       />
       <img
         src={p8}
-        alt="react like icon"
-        className="absolute top-[20%] left-[12%] w-[3vw]"
+        alt="react_icon"
+        className="absolute top-[15%] left-[27%] w-[2vw]"
       />
       <img
         src={p9}
-        alt="undraw programming"
-        className="absolute bottom-[0%] right-[0%] w-[27vw] "
+        alt="programming"
+        className="absolute bottom-[0%] right-[0%] w-[22vw] "
       />
 
       {/* Title Section with Centered Text */}
-      <div className="text-[7vw] flex justify-center items-center leading-none mb-0  text-center mt-10 w-[69%] mx-auto">
+      <div className="text-[7vw] flex justify-center items-center leading-none mb-0  text-center mt-20 w-[69%] mx-auto">
         {titleLetters.map((item, index) => (
           <span
             key={index}
@@ -149,17 +149,17 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="uppercase text-[6vw] font-GSD_Regular leading-none mb-6 text-center">
+      <div className="uppercase text-[6vw] font-GSD_Regular leading-none mb-10 text-center">
         VIIT
       </div>
 
-      <div className="font-GSD-Regular text-[2vw] w-[70vw] leading-none mb-6 text-center text-grey-700">
+      <div className="font-GSD-Regular text-[22px] w-[50vw] leading-none mb-10 text-center text-grey-700">
         By offering seminars, mentorship initiatives, and forums for exchanging
         insights, we strive to foster a community that embraces lifelong
         learning and the sharing of knowledge.
       </div>
 
-      <div className="font-GSD-Regular text-[1vw] w-[85%] flex items-center justify-center mb-4 text-grey-700">
+      <div className="font-GSD-Regular text-[1vw] w-[85%] flex items-center justify-center mb-8 text-grey-700">
         <span className="px-4 text-grey-700">LEARN</span>
         <FaRegSquare />
         <span className="px-4 text-grey-700 ">GROW</span>
@@ -167,7 +167,7 @@ const Hero = () => {
         <span className="px-4 text-grey-700">BUILD</span>
       </div>
 
-      <button className="h-[8vh] w-[8vw] bg-blue-500 text-white rounded-lg text-[2vw]">
+      <button className="h-[8vh] w-[10vw] bg-blue-500 text-white rounded-lg text-[2vw] transition-transform duration-300 ease-in-out hover:bg-blue-700 hover:scale-105">
         Join us
       </button>
     </div>
