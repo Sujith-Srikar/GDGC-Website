@@ -54,16 +54,9 @@ const articles = [
 
 const Articles = () => {
   return (
-    <Container
+    <div
       id="articles"
-      maxWidth="lg"
-      sx={{
-        backgroundColor: "#ffffff",
-        paddingY: 8,
-        borderRadius: 2,
-        minHeight: "100vh",
-      }}
-      className="mt-2"
+      className="mt-2 min-h-screen bg-white px-2 md:px-10"
     >
       <motion.div
         initial={{ opacity: 0, translateY: -20 }}
@@ -146,7 +139,7 @@ const Articles = () => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </div>
   );
 };
 
