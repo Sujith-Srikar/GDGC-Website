@@ -7,6 +7,7 @@ import "./App.css";
 
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { FeedbackForm } from "./components/suggestions.tsx";
 
 function App() {
   const location = useLocation();
@@ -32,7 +33,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/event" element={<Event />} />
+          <Route path="/event" element={<Events />} />
         </Routes>
       </AnimatePresence>
       <FeedbackForm />
