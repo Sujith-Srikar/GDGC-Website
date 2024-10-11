@@ -48,10 +48,9 @@ function Footer() {
           transformStyle: "preserve-3d",
           transform,
         }}
-        className="flex flex-col md:relative items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8 md:h-[85vh] px-[5vw]"
-      >
+        className="flex flex-col md:relative items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8 md:h-[85vh] px-[5vw]">
         {/* Image Section */}
-        <div className="flex justify-center md:relative md:right-[15%] items-center h-auto w-full sm:w-[70vw] md:w-[40vw]">
+        <div className="flex justify-center md:relative md:right-[18%] md:top-[6%] items-center h-auto w-full sm:w-[70vw] md:w-[40vw]">
           <img
             src={footer_ill}
             alt="Footer Illustration"

@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white p-4 flex justify-between items-center w-full shadow-md px-[5vw] font-GSD_Regular">
+    <nav className="navbar relative bg-white p-4 flex justify-between items-center w-full shadow-md px-[5vw] font-GSD_Regular">
       {/* Logo Section */}
       <div className="flex items-center">
         <button onClick={() => navigate("/")}>

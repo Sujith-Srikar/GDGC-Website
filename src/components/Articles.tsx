@@ -58,11 +58,12 @@ const Articles = () => {
       id="articles"
       maxWidth="lg"
       sx={{
-        backgroundColor: "#fff",
+        backgroundColor: "#ffffff",
         paddingY: 8,
         borderRadius: 2,
         minHeight: "100vh",
       }}
+      className="mt-2"
     >
       <motion.div
         initial={{ opacity: 0, translateY: -20 }}
