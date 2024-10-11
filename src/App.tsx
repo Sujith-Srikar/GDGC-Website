@@ -5,12 +5,13 @@ import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
 
-
 import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import { FeedbackForm } from "./components/suggestions.tsx";
 
 function App() {
   const location = useLocation();
-  useEffect(()=> {
+  useEffect(() => {
     const lenis = new Lenis();
 
     function raf(time: number) {
@@ -28,6 +29,14 @@ function App() {
   return (
     <>
       <Navbar />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<Home />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/event" element={<Events />} />
+        </Routes>
+      </AnimatePresence>
+      <FeedbackForm />
       <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
         <Route path="/team" element={<Team />} />
