@@ -7,10 +7,24 @@ export const FeedbackForm = () => {
   const [selectedEmoji, setSelectedEmoji] = useState<number | null>(null);
   const [thoughts, setThoughts] = useState("");
 
+  const emojis = ["😄", "🙂", "😐", "🙁"];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submitted:", { selectedEmoji, thoughts });
-    // Here you would typically send the data to your backend
+
+    // Construct the mailto link
+    const subject = encodeURIComponent("Feedback / Suggestion");
+    const body = encodeURIComponent(
+      `Emoji: ${
+        selectedEmoji !== null ? emojis[selectedEmoji] : "None"
+      }\n\nThoughts: ${thoughts}`
+    );
+    const mailtoLink = `mailto:himavarshinimahapatruni@gmail.com?subject=${subject}&body=${body}`;
+
+    // Redirect to mailto link
+    window.location.href = mailtoLink;
+
+    // You could also send this to your backend, but here it's handled by the mailto redirect
   };
 
   return (
@@ -73,7 +87,7 @@ export const FeedbackForm = () => {
           </p>
 
           <div className="flex justify-between mb-6">
-            {["😄", "🙂", "😐", "🙁"].map((emoji, index) => (
+            {emojis.map((emoji, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedEmoji(index)}
