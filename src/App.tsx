@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Navbar, Footer } from "./components/index.ts";
-import { FeedbackForm } from "./components/suggestions.tsx";
-import { Home, Team, Event } from "./pages/index.ts";
+import { Navbar, Footer, Articles } from "./components/index.ts";
+import {Home, Team , Events } from "./pages/index.ts"
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "./App.css";
@@ -20,7 +19,11 @@ function App() {
     }
 
     requestAnimationFrame(raf);
-  });
+
+    return () => {
+      lenis.destroy();
+    };
+  })
 
   return (
     <>
@@ -36,9 +39,11 @@ function App() {
       <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/event" element={<Event />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/articles" element={<Articles />} />
       </Routes>
+      <Footer />
     </>
   );
 }
