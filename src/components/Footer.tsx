@@ -157,7 +157,7 @@ function Footer() {
       </div>
 
       {/* Copyright Section */}
-      <div className="border-t border-black w-full bg-white py-4 px-[5vw] mt-8 md:mt-12">
+      <div className="absolute bottom-0 border-t border-black w-full bg-white py-4 px-[5vw] mt-8 md:mt-12">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-700 text-sm md:text-base">2024 ©GDGC VIIT</p>
           <div className="flex items-center">

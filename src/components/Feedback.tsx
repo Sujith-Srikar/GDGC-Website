@@ -3,7 +3,12 @@ import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 
-export const FeedbackForm = () => {
+import tf from "/images/tensorflow.svg";
+import fb from "/images/firebase.svg";
+import gcloud from "/images/gcloud.svg";
+import flutter from "/images/flutter.svg";
+
+const FeedbackForm = () => {
   const [selectedEmoji, setSelectedEmoji] = useState<number | null>(null);
   const [thoughts, setThoughts] = useState("");
 
@@ -19,65 +24,47 @@ export const FeedbackForm = () => {
         selectedEmoji !== null ? emojis[selectedEmoji] : "None"
       }\n\nThoughts: ${thoughts}`
     );
-    const mailtoLink = `mailto:himavarshinimahapatruni@gmail.com?subject=${subject}&body=${body}`;
+    // Construct the Gmail compose link
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=kandregulasujith@gmail.com&su=${subject}&body=${body}`;
 
-    // Redirect to mailto link
-    window.location.href = mailtoLink;
+    // Redirect to Gmail compose page
+    window.open(gmailLink, "_blank");
 
     // You could also send this to your backend, but here it's handled by the mailto redirect
   };
 
   return (
-    <div className="relative w-full h-screen bg-gray-100 overflow-hidden">
-      {/* Grid background */}
+    <div className="relative w-full h-screen bg-[#ffffff] mt-2 bg-grid-black/[0.2]">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]"></div>
+      {/* Grid background
       <div className="absolute inset-0 grid grid-cols-[repeat(20,1fr)] grid-rows-[repeat(20,1fr)] gap-px">
         {Array.from({ length: 400 }).map((_, i) => (
           <div key={i} className="bg-white"></div>
         ))}
-      </div>
+      </div> */}
 
       {/* TensorFlow logo */}
-      <div className="absolute top-8 left-8 w-16 h-16 transform -rotate-12">
-        <img
-          src="../../public/images/layer1.png"
-          alt="TensorFlow Logo"
-          width={64}
-          height={64}
-        />
+      <div className="absolute top-8 left-16 w-16 h-16 transform -rotate-12 hidden md:block">
+        <img src={tf} alt="TensorFlow Logo" width={64} height={64} />
       </div>
 
       {/* Google Cloud logo */}
-      <div className="absolute top-6 right-12 w-16 h-16 transform rotate-12">
-        <img
-          src="../../public/images/Frame 102.png"
-          alt="Google Cloud Logo"
-          width={64}
-          height={64}
-        />
+      <div className="absolute top-6 right-12 w-16 h-16 transform rotate-12 hidden md:block">
+        <img src={gcloud} alt="Google Cloud Logo" width={64} height={64} />
       </div>
 
       {/* Firebase logo */}
-      <div className="absolute bottom-20 left-16 w-16 h-16 transform rotate-45">
-        <img
-          src="../../public/images/Fire.png"
-          alt="Firebase Logo"
-          width={64}
-          height={64}
-        />
+      <div className="absolute bottom-20 left-16 w-16 h-16 transform rotate-45 hidden md:block">
+        <img src={fb} alt="Firebase Logo" width={64} height={64} />
       </div>
 
       {/* Flutter logo */}
-      <div className="absolute bottom-12 right-20 w-16 h-16 transform -rotate-12">
-        <img
-          src="../../public/images/Frame 103.png"
-          alt="Flutter Logo"
-          width={64}
-          height={64}
-        />
+      <div className="absolute bottom-28 right-20 w-16 h-16 transform -rotate-12 hidden md:block">
+        <img src={flutter} alt="Flutter Logo" width={64} height={64} />
       </div>
 
       {/* Feedback form card */}
-      <Card className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md shadow-xl">
+      <Card className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[28vw] shadow-xl bg-white">
         <CardContent className="p-6">
           <h2 className="text-2xl font-semibold mb-2">
             Any feedback / Suggestion
@@ -86,7 +73,7 @@ export const FeedbackForm = () => {
             What do you think of this Community?
           </p>
 
-          <div className="flex justify-between mb-6">
+          <div className="flex justify-between items-center mb-6">
             {emojis.map((emoji, index) => (
               <button
                 key={index}
@@ -107,7 +94,7 @@ export const FeedbackForm = () => {
           <Textarea
             value={thoughts}
             onChange={(e) => setThoughts(e.target.value)}
-            className="mb-4"
+            className="mb-4 border border-grey-700"
             rows={4}
           />
 
@@ -133,3 +120,5 @@ export const FeedbackForm = () => {
     </div>
   );
 };
+
+export default FeedbackForm;
