@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import footer_logo from "/images/footer_gdg_logo.svg";
 import footer_ill from "/images/Footer_Illustration.png";
 
@@ -38,7 +43,7 @@ function Footer() {
   };
 
   return (
-    <footer className="relative min-h-screen w-full bg-white bg-dot-black/[0.2] font-GSD_Regular">
+    <footer className="relative min-h-screen w-full pt-10 bg-white bg-dot-black/[0.2] font-GSD_Regular">
       {/* Main Content Wrapper */}
       <motion.div
         ref={ref}
@@ -48,7 +53,8 @@ function Footer() {
           transformStyle: "preserve-3d",
           transform,
         }}
-        className="flex flex-col md:relative items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8 md:h-[85vh] px-[5vw]">
+        className="flex flex-col md:relative items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8 md:h-[85vh] px-[5vw]"
+      >
         {/* Image Section */}
         <div className="flex justify-center md:relative md:right-[18%] md:top-[6%] items-center h-auto w-full sm:w-[70vw] md:w-[40vw]">
           <img
@@ -71,10 +77,12 @@ function Footer() {
               className="linkWrap style-4"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                "--line": "#ea4335",
-                "--color": "#ea4335",
-              } as React.CSSProperties}
+              style={
+                {
+                  "--line": "#ea4335",
+                  "--color": "#ea4335",
+                } as React.CSSProperties
+              }
             >
               <span className="text-red-500">GITHUB</span>
               <svg viewBox="0 0 13 20">
@@ -93,10 +101,12 @@ function Footer() {
               className="linkWrap style-4"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                "--line": "#4285f4",
-                "--color": "#4285f4",
-              } as React.CSSProperties}
+              style={
+                {
+                  "--line": "#4285f4",
+                  "--color": "#4285f4",
+                } as React.CSSProperties
+              }
             >
               <span className="text-blue-500">X</span>
               <svg viewBox="0 0 13 20">
@@ -115,10 +125,12 @@ function Footer() {
               className="linkWrap style-4"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                "--line": "#34a853",
-                "--color": "#34a853",
-              } as React.CSSProperties}
+              style={
+                {
+                  "--line": "#34a853",
+                  "--color": "#34a853",
+                } as React.CSSProperties
+              }
             >
               <span className="text-green-500">LINKEDIN</span>
               <svg viewBox="0 0 13 20">
@@ -137,10 +149,12 @@ function Footer() {
               className="linkWrap style-4"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                "--line": "#fbbc04",
-                "--color": "#fbbc04",
-              } as React.CSSProperties}
+              style={
+                {
+                  "--line": "#fbbc04",
+                  "--color": "#fbbc04",
+                } as React.CSSProperties
+              }
             >
               <span className="text-yellow-500">INSTAGRAM</span>
               <svg viewBox="0 0 13 20">
@@ -154,10 +168,18 @@ function Footer() {
             </Link>
           </li>
         </ul>
+        <div className="mt-8">
+          <Link
+            to="/feedback"
+            className="inline-block px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition duration-300"
+          >
+            Give Feedback
+          </Link>
+        </div>
       </div>
 
       {/* Copyright Section */}
-      <div className="absolute bottom-0 border-t border-black w-full bg-white py-4 px-[5vw] mt-8 md:mt-12">
+      <div className="relative bottom-0 border-t border-black w-full bg-white py-4 px-[5vw] mt-8 md:mt-12">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-700 text-sm md:text-base">2024 ©GDGC VIIT</p>
           <div className="flex items-center">
