@@ -5,5 +5,15 @@ import TeamMember from "./TeamMember"
 import Hero from "./Hero"
 import Event from "./Event"
 import Articles from "./Articles"
+import FeedbackForm from "./Feedback"
 
-export {Navbar, Transition, TeamMember, Footer, Hero, Event, Articles}
+export {
+  Navbar,
+  Transition,
+  TeamMember,
+  Footer,
+  Hero,
+  Event,
+  Articles,
+  FeedbackForm,
+};
