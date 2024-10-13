@@ -59,7 +59,6 @@ const Hero = () => {
     }
   }, [vibrate]);
 
-
   const titleLetters = [
     { letter: "“", color: "text-red-500" },
     { letter: "G", color: "text-green-600" },
@@ -80,9 +79,9 @@ const Hero = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, translateY: 50 }}
+      initial={{ opacity: 0, translateY: 20 }}
       animate={{ opacity: 1, translateY: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative w-full min-h-screen font-GSD_Regular flex items-center justify-center flex-col"
     >
       {/* Adjust Image Section for Mobile */}
@@ -173,7 +172,7 @@ const Hero = () => {
         <span className="px-4 text-grey-700">BUILD</span>
       </div>
 
-      <button className="btn h-[7vh] sm:h-[8vh] w-[35vw] sm:w-[10vw] bg-blue-500 text-white rounded-full text-[4vw] sm:text-[2vw] transition-transform duration-300 ease-in-out hover:bg-blue-700 hover:scale-105">
+      <button className="btn h-[7vh] sm:h-[8vh] w-[35vw] sm:w-[10vw] bg-blue-500 text-white rounded-lg text-[4vw] sm:text-[2vw] transition-transform duration-300 ease-in-out hover:bg-blue-700 hover:scale-105">
         Join us
       </button>
     </motion.div>
