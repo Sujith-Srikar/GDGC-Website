@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Logo from "/images/Header_Logo.svg";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,7 +18,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar relative bg-white p-4 flex justify-between items-center w-full shadow-md px-[5vw] font-GSD_Regular">
+    <motion.div
+      initial={{ opacity: 0, translateY: -20 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="navbar relative bg-white p-4 flex justify-between items-center w-full shadow-md px-[5vw] font-GSD_Regular"
+    >
       {/* Logo Section */}
       <div className="flex items-center">
         <button onClick={() => navigate("/")}>
@@ -135,7 +141,7 @@ const Navbar = () => {
           Contact Us
         </button>
       </div>
-    </nav>
+    </motion.div>
   );
 };
 

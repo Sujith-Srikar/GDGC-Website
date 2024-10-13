@@ -5,6 +5,11 @@
   color: #0f0f0f;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+
 .transition-in .block {
   transform-origin: top;
 }
@@ -118,4 +123,48 @@
 /* Hide scrollbar for Firefox */
 .no-scrollbar {
   scrollbar-width: none; /* Firefox */
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.companimate {
+  animation: appear linear;
+  animation-timeline: view();  /* This is intended to animate when the element comes into view */
+  animation-range: entry 0% cover 40%; /* Animates when the element covers 40% of the viewport */
+}
+
+.btn {
+   border: 0;
+   outline: 0;
+   /* styles */
+   background:  linear-gradient(to right,  #E94335
+,#F9AB00,#0F9D58,#4285F4);
+   background-size: 600%;
+   transition: .3s;
+   animation: bruh 16s linear infinite;
+  
+}
+
+@keyframes bruh {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }

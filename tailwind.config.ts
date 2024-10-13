@@ -61,7 +61,7 @@ export default {
         yellow: {
           300: "#EED28A",
           500: "#FBBC04",
-          600: "F9AB00",
+          600: "#F9AB00",
         },
         green: {
           300: "#92E3A9",
