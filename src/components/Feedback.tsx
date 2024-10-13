@@ -18,14 +18,14 @@ const FeedbackForm = () => {
     e.preventDefault();
 
     // Construct the mailto link
-    const subject = encodeURIComponent("Feedback / Suggestion");
+    const subject = encodeURIComponent("Feedback / Suggestion to GDGC OnCampus VIIT");
     const body = encodeURIComponent(
       `Emoji: ${
         selectedEmoji !== null ? emojis[selectedEmoji] : "None"
       }\n\nThoughts: ${thoughts}`
     );
     // Construct the Gmail compose link
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=kandregulasujith@gmail.com&su=${subject}&body=${body}`;
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=himavarshinimahapatruni@gmail.com&su=${subject}&body=${body}`;
 
     // Redirect to Gmail compose page
     window.open(gmailLink, "_blank");

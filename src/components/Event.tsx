@@ -22,17 +22,19 @@ const NewEvents = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
+  // scrolling position to -50% in y
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "1%"]);
 
   return (
     <section
       ref={targetRef}
-      className="relative h-[300vh]"
+      className="relative mx-10 pb-14" // remember to keep h-[300vh] always and remove margin too
     >
-      <h2 className="text-4xl font-semibold pl-12 pt-16 pb-2 font-GSD_Regular text-grey-700">
+      <h2 className="text-4xl font-semibold pl-12 pt-16 pb-10 font-GSD_Regular text-grey-700">
         Upcoming Events:
       </h2>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      {/* h-screen */}
+      <div className="sticky top-0 py-14 flex items-center overflow-hidden"> 
         <motion.div style={{ x }} className="flex gap-10 md:gap-20">
           <div className="flex gap-10 md:gap-20">
             {upcomingCards.map((card, index) => (
@@ -52,18 +54,25 @@ const PrevEvents = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
+  // scrolling position to -50% in y
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "1%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] overflow-y-visible">
-      <h2 className="text-4xl font-semibold pl-12 pt-0 pb-4 font-google_sans_display text-grey-700">
+    <section
+      ref={targetRef}
+      className="relative mx-10 pb-14" // remember to keep h-[300vh] always and remove margin too
+    >
+      <h2 className="text-4xl font-semibold pl-12 pt-16 pb-10 font-GSD_Regular text-grey-700">
         Past Events:
       </h2>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      {/* h-screen */}
+      <div className="sticky top-0 py-14 flex items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-10 md:gap-20">
-          {pastCards.map((card, index) => (
-            <Card key={index} card={card} index={index} />
-          ))}
+          <div className="flex gap-10 md:gap-20">
+            {pastCards.map((card, index) => (
+              <Card key={index} card={card} index={index} />
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
@@ -160,7 +169,7 @@ const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => 
             #dev
           </span>
         </div>
-        <button className="bg-blue-500 text-white text-center px-6 py-1 rounded backdrop-blur transition-colors hover:bg-white/30 hover:text-black">
+        <button className="bg-blue-500 text-white text-center px-6 py-1 rounded backdrop-blur transition-colors hover:bg-blue-700 hover:scale-105">
           RSVP
         </button>
       </div>
@@ -170,17 +179,17 @@ const Card: React.FC<{ card: CardProps, index: number }> = ({ card, index }) => 
 
 export const upcomingCards: CardProps[] = [
   { title: "Web Development", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Learn about the latest trends in web development"},
-  { title: "Artificial Intelligence and Machine Learning", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Discover how AI is changing the world."},
-  { title: "Android Development", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Build powerful Android apps using modern frameworks."},
-  { title: "Data Science", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Explore the world of data and analytics."},
-  { title: "Cloud Computing", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Learn about scalable cloud infrastructure."},
+  // { title: "Artificial Intelligence and Machine Learning", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Discover how AI is changing the world."},
+  // { title: "Android Development", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Build powerful Android apps using modern frameworks."},
+  // { title: "Data Science", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Explore the world of data and analytics."},
+  // { title: "Cloud Computing", logo: "gdg logo.png", image: "/images/devfest.png", date: "Oct 5th 2024", content: "Learn about scalable cloud infrastructure."},
 ];
 export const pastCards: CardProps[] = [
   { title: "Past Event 1", logo: "logo.png", image: "/images/devfest.png", date: "Sep 20th 2024", content: "Details of past event 1" },
-  { title: "Past Event 2", logo: "logo.png", image: "/images/devfest.png", date: "Aug 15th 2024", content: "Details of past event 2"},
-  { title: "Past Event 3", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 3"},
-  { title: "Past Event 4", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 4" },
-  { title: "Past Event 5", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 5"},
+  // { title: "Past Event 2", logo: "logo.png", image: "/images/devfest.png", date: "Aug 15th 2024", content: "Details of past event 2"},
+  // { title: "Past Event 3", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 3"},
+  // { title: "Past Event 4", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 4" },
+  // { title: "Past Event 5", logo: "logo.png", image: "/images/devfest.png", date: "July 30th 2024", content: "Details of past event 5"},
 ];
 
 const Event = () => {
