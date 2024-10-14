@@ -108,7 +108,7 @@ const Hero = () => {
       <img
         src={p5}
         alt="Cloud_1"
-        className="absolute top-[8%] left-[40%] w-[40vw] sm:w-[22vw] hidden sm:block"
+        className="absolute top-[20%] md:top-[8%] md:left-[40%] w-[40vw] sm:w-[22vw]"
       />
       <img
         src={p6}

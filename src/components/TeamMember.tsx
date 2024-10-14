@@ -18,7 +18,7 @@ const TeamMember = ({MemberName, Role, Image, GithubLink, LinkedinLink} : {Membe
           </a>
         </div>
       </div>
-      <img className="image rounded-2xl aspect-square w-[45%] object-cover" src={Image} alt="TeamMember" />
+      <img className="image profile rounded-2xl aspect-square w-[45%] object-cover" src={Image} alt="TeamMember" />
     </div>
   );
 };
