@@ -172,7 +172,7 @@ const Hero = () => {
         <span className="px-4 text-grey-700">BUILD</span>
       </div>
 
-      <button className="btn h-[7vh] sm:h-[8vh] w-[35vw] sm:w-[10vw] bg-blue-500 text-white rounded-lg text-[4vw] sm:text-[2vw] transition-transform duration-300 ease-in-out hover:bg-blue-700 hover:scale-105">
+      <button className="h-[7vh] sm:h-[7vh] w-[35vw] sm:w-[10vw] bg-blue-500 text-white rounded-lg text-[4vw] sm:text-[2vw] transition-transform duration-300 ease-in-out hover:bg-blue-700 hover:scale-105">
         Join us
       </button>
     </motion.div>

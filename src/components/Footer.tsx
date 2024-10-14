@@ -56,7 +56,7 @@ function Footer() {
         className="companimate flex flex-col md:relative items-center justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-8 md:h-[85vh] px-[5vw]"
       >
         {/* Image Section */}
-        <div className="flex justify-center md:relative md:right-[18%] md:top-[6%] items-center h-auto w-full sm:w-[70vw] md:w-[40vw]">
+        <div className="flex justify-center md:relative md:right-[18%] md:top-[4%] items-center h-auto w-full sm:w-[70vw] md:w-[40vw]">
           <img
             src={footer_ill}
             alt="Footer Illustration"
@@ -66,7 +66,7 @@ function Footer() {
       </motion.div>
 
       {/* Socials Section */}
-      <div className="socials companimate md:absolute md:left-[54.5%] md:top-[25%] flex flex-col md:items-start items-center w-full md:w-[40vw]">
+      <div className="socials companimate md:absolute md:left-[54.5%] md:top-[26%] flex flex-col md:items-start items-center w-full md:w-[40vw]">
         <h2 className="font-GSD_Regular text-3xl md:text-[4vw] mb-12 text-center md:text-left border-b-[3.5px] border-black pb-1.5">
           SOCIALS
         </h2>

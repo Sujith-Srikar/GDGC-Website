@@ -210,7 +210,7 @@ export const pastCards: CardProps[] = [
 
 const Event = () => {
   return (
-    <div className="relative border border-red-900">
+    <div className="relative">
       <NewEvents />
       <PrevEvents />
     </div>

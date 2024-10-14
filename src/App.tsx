@@ -40,7 +40,7 @@ function App() {
         <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="/test" element={<IndividualEvent />} />
       </Routes>
-      <Footer />
+      {location.pathname !== "/test" && <Footer />}
     </>
   );
 }
