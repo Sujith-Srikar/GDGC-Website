@@ -28,9 +28,9 @@ const NewEvents = () => {
   return (
     <section
       ref={targetRef}
-      className="relative mx-10 pb-14" // remember to keep h-[300vh] always and remove margin too
+      className="relative pl-2 md:pl-6 pb-14" // remember to keep h-[300vh] always and remove margin too
     >
-      <h2 className="text-4xl font-semibold pl-12 pt-16 pb-10 font-GSD_Regular text-grey-700">
+      <h2 className="text-4xl font-semibold md:pl-12 pt-16 pb-10 font-GSD_Regular text-grey-700">
         Upcoming Events:
       </h2>
       {/* h-screen */}
@@ -59,15 +59,15 @@ const PrevEvents = () => {
   return (
     <section
       ref={targetRef}
-      className="relative mx-10 pb-14" // remember to keep h-[300vh] always and remove margin too
+      className="relative pl-2 md:pl-6 pb-14" // remember to keep h-[300vh] always and remove margin too
     >
-      <h2 className="text-4xl font-semibold pl-12 pt-16 pb-10 font-GSD_Regular text-grey-700">
+      <h2 className="text-4xl font-semibold md:pl-12 pt-16 pb-10 font-GSD_Regular text-grey-700">
         Past Events:
       </h2>
       {/* h-screen */}
       <div className="sticky top-0 py-14 flex items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-10 md:gap-20">
-          <div className="flex gap-10 md:gap-20">
+          <div className="flex w-full gap-10 md:gap-20">
             {pastCards.map((card, index) => (
               <Card key={index} card={card} index={index} />
             ))}
@@ -127,7 +127,7 @@ const Card: React.FC<{ card: CardProps; index: number }> = ({
           transform,
         } as any
       }
-      className="w-[350px] h-[450px] sm:w-[500px] top-3 sm:h-[400px] bg-white border-2 border-black rounded-[20px] hover:shadow-2xl flex-shrink-0"
+      className="w-[90vw] sm:w-[60vw] md:w-[30vw] top-3 sm:h-[400px] bg-white border-2 border-black rounded-[20px] hover:shadow-2xl flex-shrink-0"
     >
       <div
         style={{
@@ -210,7 +210,7 @@ export const pastCards: CardProps[] = [
 
 const Event = () => {
   return (
-    <div className="relative">
+    <div className="relative border border-red-900">
       <NewEvents />
       <PrevEvents />
     </div>

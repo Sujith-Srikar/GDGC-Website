@@ -6,6 +6,7 @@ import Hero from "./Hero"
 import Event from "./Event"
 import Articles from "./Articles"
 import FeedbackForm from "./Feedback"
+import IndividualEvent from "./IndividualEvent"
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   Event,
   Articles,
   FeedbackForm,
+  IndividualEvent
 };
