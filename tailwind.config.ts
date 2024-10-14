@@ -77,6 +77,11 @@ export default {
         GSD_Bold: "GSD-Bold",
         GSD_Regular: "GSD-Regular",
       },
+      screens: {
+        lg: "1600px", // Set lg to 1600px
+        xl: "1920px", // Define other breakpoints if needed
+        "2xl": "2048px",
+      },
     },
   },
   plugins: [addVariablesForColors, addSvgPatterns],
