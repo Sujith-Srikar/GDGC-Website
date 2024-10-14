@@ -54,10 +54,7 @@ const articles = [
 
 const Articles = () => {
   return (
-    <div
-      id="articles"
-      className="mt-10 pb-20 min-h-screen bg-[#ffffff] px-2 md:px-10"
-    >
+    <div id="articles" className="mt-2 min-h-screen bg-[#ffffff] px-2 md:px-10">
       <motion.div
         initial={{ opacity: 0, translateY: -20 }}
         animate={{ opacity: 1, translateY: 0 }}

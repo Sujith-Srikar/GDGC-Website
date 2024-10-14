@@ -61,7 +61,7 @@ export default {
         yellow: {
           300: "#EED28A",
           500: "#FBBC04",
-          600: "#F9AB00",
+          600: "F9AB00",
         },
         green: {
           300: "#92E3A9",
@@ -76,6 +76,11 @@ export default {
       fontFamily: {
         GSD_Bold: "GSD-Bold",
         GSD_Regular: "GSD-Regular",
+      },
+      screens: {
+        lg: "1600px", // Set lg to 1600px
+        xl: "1920px", // Define other breakpoints if needed
+        "2xl": "2048px",
       },
     },
   },
